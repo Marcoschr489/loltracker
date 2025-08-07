@@ -1,0 +1,5 @@
+"Passive",
+"The Darkin Scythe",
+"Kayn pode evoluir durante a partida baseado nos tipos de campeões que enfrentou, ShadowAssassin(enfrentar campeões de longa distância) ou Rhaast(enfrentar campeões corpo a corpo).",
+"nenhum",
+"0"

@@ -1,0 +1,5 @@
+"Passive",
+"Unseen Predator",
+"o próximo ataque de rengar saltará no alvo caso esteja camuflado, recebe bônus de ataque por eliminação.A cada habilidade usada recebe 1 stack de ferocidade que fortalece as habilidades",
+"Nenhum",
+"0"

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Campeão</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<h1>Cadastro de Campeão</h1>
+
+<form th:action="@{/campeoes/salvar}" method="post" th:object="${campeao}">
+    <label for="nome">Nome do Campeão:</label>
+    <input type="text" th:field="*{nome}" id="nome">
+    <label for="lane">Lane:</label>
+    <input type="text" th:field="*{lane}" id="lane">
+    <label for="role">Função (role):</label>
+    <input type="text" th:field="*{role}" id="role">
+    <label for="maestria">Maestria:</label>
+    <input type="number" th:field="*{maestria}" id="maestria">
+
+    <!-- Splash art -->
+    <div id="splashContainer" style="margin-top: 20px;">
+        <img id="splashArt" style="max-width: 300px; display: none;">
+    </div>
+
+    <div id="habilidades">
+        <div id="card-Passive" class="card"></div>
+        <div id="card-Q" class="card"></div>
+        <div id="card-W" class="card"></div>
+        <div id="card-E" class="card"></div>
+        <div id="card-R" class="card"></div>
+    </div>
+
+    <a href="/lista" class="botao-voltar">Ver Campeões</a>
+    <button type="submit">Salvar Campeão</button>
+</form>
+
+<script>
+    // Preenche os campos de uma habilidade
+    function preencherCampos(prefixo, dados) {
+        document.getElementById(prefixo + "Nome").textContent = dados.nome || "";
+        document.getElementById(prefixo + "Efeito").textContent = dados.efeito || "";
+        document.getElementById(prefixo + "Recurso").textContent = dados.recurso || "";
+        document.getElementById(prefixo + "Custo").textContent = dados.custo || "";
+    }
+
+    // Atualiza splash e ícones ao digitar o nome do campeão
+    function atualizarIcones(nome) {
+        nome = nome.toLowerCase();
+
+        const splashImg = document.getElementById("splashArt");
+        splashImg.src = `/splashArt/Campeoes/${nome}/splashart.png`;
+        splashImg.style.display = "block";
+
+        const habilidades = ['passive', 'q', 'w', 'e', 'r'];
+        habilidades.forEach(tipo => {
+            const img = document.getElementById(tipo);
+            if (img) {
+                img.src = `/splashArt/Campeoes/${nome}/${tipo}.webp`;
+                img.style.display = "inline";
+            }
+        });
+    }
+
+    // Aguarda o DOM carregar
+    document.addEventListener("DOMContentLoaded", function () {
+        const nomeInput = document.getElementById("nome");
+
+        nomeInput.addEventListener("input", function () {
+            const nome = this.value.toLowerCase();
+
+            // Atualiza ícones
+            atualizarIcones(nome);
+
+            // Busca habilidades do backend
+            fetch(`/campeoes/descricao/habilidades/${nome}`)
+                .then(response => {
+                    if (!response.ok) throw new Error("Erro ao buscar habilidades");
+                    return response.json();
+                })
+                .then(data => {
+                    ["Passive", "Q", "W", "E", "R"].forEach(tipo => {
+                        const habilidade = data[tipo];
+                        document.getElementById(`card-${tipo}`).innerHTML = `
+                            <img src="/splashArt/Campeoes/${nome}/${tipo}.webp" alt="${tipo}" />
+                            <h4>${habilidade.nome}</h4>
+                            <p>${habilidade.efeito}</p>
+                            <p>Recurso: ${habilidade.recurso} | Custo: ${habilidade.custo}</p>
+                        `;
+                    });
+                })
+                .catch(err => console.error("Erro ao carregar habilidades:", err));
+        });
+    });
+</script>
+
+
+</body>
+</html>

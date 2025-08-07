@@ -1,0 +1,5 @@
+"R",
+"Hallucinate",
+"Shaco desaparece brevemente e reparece com um clone, depois da duração ou ao morrer o clone explode causando dano em área e fear.",
+"mana",
+"100"

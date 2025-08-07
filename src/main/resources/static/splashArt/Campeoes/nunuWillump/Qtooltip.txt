@@ -1,0 +1,5 @@
+"Q",
+"Consume",
+"Morde um inimigo e se cura, a cura aumenta em 50% baseado na sua vida faltante.",
+"mana",
+"60~40"

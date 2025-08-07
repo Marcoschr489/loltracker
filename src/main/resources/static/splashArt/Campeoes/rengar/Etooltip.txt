@@ -1,0 +1,5 @@
+"E",
+"Bola Strike",
+"arremessa uma boleadera que causa dano e lentidão",
+"ferocidade",
+"0~4"

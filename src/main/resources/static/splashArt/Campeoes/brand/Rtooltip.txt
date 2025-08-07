@@ -1,0 +1,5 @@
+"R",
+"Pyroclasm",
+"Brand Arremessa uma bola de fogo que salta entre alvos(5x).",
+"mana",
+"100

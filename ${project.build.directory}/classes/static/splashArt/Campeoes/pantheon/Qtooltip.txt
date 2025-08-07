@@ -1,0 +1,5 @@
+"Q",
+"Comet Spear",
+"Crava ou Arremesa uma lança no inimigo causando dano.",
+"mana",
+"30~50"

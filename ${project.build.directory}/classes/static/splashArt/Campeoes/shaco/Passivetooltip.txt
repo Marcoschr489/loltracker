@@ -1,0 +1,5 @@
+"Passive",
+"Backstab",
+"Ataques pelas costas causam dano adicional.",
+"Nenhum",
+"0"

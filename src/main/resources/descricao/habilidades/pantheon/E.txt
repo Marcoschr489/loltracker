@@ -1,0 +1,5 @@
+"E",
+"Aegis Assault",
+"Levanta o escudo e bloqueia dano ao longo da duração além de causar dano",
+"mana",
+"55"

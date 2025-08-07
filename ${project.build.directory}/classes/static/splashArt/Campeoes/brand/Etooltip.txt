@@ -1,0 +1,5 @@
+"E"
+"Conflagration",
+"Incendeia um alvo e espalha fogo ao redor dele",
+"mana",
+"70~90"

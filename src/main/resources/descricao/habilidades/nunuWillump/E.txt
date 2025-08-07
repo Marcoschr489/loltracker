@@ -1,0 +1,5 @@
+"E",
+"SnowBall Barrage",
+"nunu arremessa várias bolas de neve causando lentidão e dano(cria uma área em volta de Willump que prende brevemente inimigos que foram acertados pelas bolas de neve)",
+"mana",
+"50"

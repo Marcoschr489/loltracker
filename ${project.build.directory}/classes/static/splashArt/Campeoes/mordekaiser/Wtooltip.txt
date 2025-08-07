@@ -1,0 +1,5 @@
+"W",
+"Indestructible",
+"Passivo:mordekaiser acumula poder causando e recebendo dano.Ativo 1: mordekaiser converte o poder armazenado em escudo.2 conjuração converte o escudo em cura.",
+"nenhum",
+"0"

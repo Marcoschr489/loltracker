@@ -1,0 +1,5 @@
+"R",
+"Death Mark",
+"Zed marca um inimigo para morrer, repetindo parte do dano causado no final da duração.",
+"nenhum",
+"0"

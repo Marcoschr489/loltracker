@@ -1,0 +1,5 @@
+"Passive",
+"A Harmless Scarecrow",
+"Cria espantalhos que funcionam como wards, espantalhos imitam habilidades de fiddlesticks ao encontrarem inimigos.Fidllesticks pode imitar espantalhos caso fique parado por 1,5 seg(depois disso ao se mexer ou usar habilidades ganha velocidade de movimento)",
+"nenhum",
+"0"

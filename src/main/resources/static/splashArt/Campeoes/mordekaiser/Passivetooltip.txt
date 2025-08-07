@@ -1,0 +1,5 @@
+"Passive",
+"Darkness Rise",
+"Ao acertar 3 vezes(ataques ou habilidades), mordekaiser cria uma área que causa dano mágico.os ataques de morsekaiser causam dano mágico.",
+"nenhum",
+"0"

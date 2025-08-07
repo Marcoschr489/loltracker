@@ -1,0 +1,5 @@
+"Passive",
+"Deadly Poison",
+"Ataques de twitch envenenam seu alvo e causam dano verdadeiro por seg(acumula até 6vezes).",
+"nenhum",
+"0"

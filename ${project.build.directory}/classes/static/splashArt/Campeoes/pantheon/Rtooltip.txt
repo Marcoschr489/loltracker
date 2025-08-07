@@ -1,0 +1,5 @@
+"R",
+"Grand Starfall",
+"Pantheon seleciona uma área alvo, canaliza por alguns segundo salta e aterrisa na área causando dano.",
+"mana",
+"100"

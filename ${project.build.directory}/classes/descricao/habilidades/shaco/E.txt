@@ -1,0 +1,5 @@
+"E",
+"Two-Shiv Poison",
+"Passivo:ataques causam slow enquanto essa habilidade não estiver em CD.Ativo arremessa uma adaga que causa dano aumentado com base na vida perdida do alto e causa lentidão.",
+"mana",
+"65"

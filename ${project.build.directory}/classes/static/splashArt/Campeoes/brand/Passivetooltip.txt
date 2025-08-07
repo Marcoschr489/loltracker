@@ -1,0 +1,5 @@
+"Passive",
+"Blaze",
+"As habilidades de Brand aplicam Blaze que causam dano por seg, e aprimoram as habilidades"
+"nenhum",
+"0"

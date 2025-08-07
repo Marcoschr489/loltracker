@@ -1,0 +1,5 @@
+"Passive",
+"Unseen Predator",
+"enquanto estiver camuflado ou em um arbusto o próximo ataque de rangar saltará no alvo(alcance adicional).Rengar coleciona troféus(abates únicos), para cada troféu recebe bônus de ataque.A cada habilidade usada recebe 1 stack de ferocidade, com 4 stacks a próxima habilidade é fortalecida",
+"Nenhum",
+"0"

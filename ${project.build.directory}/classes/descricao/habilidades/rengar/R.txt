@@ -1,0 +1,5 @@
+"R",
+"Thrill of the Hunt",
+"Rengar se camufla e revela inimigos próximos.Ao atacar saltará no inimigo causando dano adicional e quebrando a armadura do inimigo",
+"nenhum",
+"0"

@@ -1,0 +1,5 @@
+"Q",
+"Head Rush",
+"Briar salta em um inimgo/aliado causa dano e atordoa.",
+"vida",
+"6% vida atual"

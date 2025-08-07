@@ -1,0 +1,5 @@
+"R",
+"Realm of Death",
+"Mordekaiser Bane um campeão alvo para seu reino e rouba % de seus atributos e se mordekaiser o abater rouba mais atributos",
+"nenhum",
+"0"

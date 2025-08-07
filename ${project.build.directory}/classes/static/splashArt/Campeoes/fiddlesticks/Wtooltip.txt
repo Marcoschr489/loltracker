@@ -1,0 +1,5 @@
+"W",
+"Bountiful Harvest",
+"Fiddlesticks drena vida de inimgos próximos se curando e causando dano.",
+"mana",
+"60~80"

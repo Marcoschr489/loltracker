@@ -1,0 +1,5 @@
+"E",
+"Shadow Slash",
+"Zed e suas sombras desferem uma lâmina giratória.",
+"energia",
+"50"

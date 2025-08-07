@@ -1,0 +1,5 @@
+"Passive",
+"Blaze",
+"As habilidades de Brand aplicam Blaze que causa dano por segundo e aprimoram a habilidade subsequente, quando Blaze é acumulado(3x) cria um área ao redor do alvo que explode brevemente causando dano baseado na vida máxima.",
+"nenhum",
+"0"

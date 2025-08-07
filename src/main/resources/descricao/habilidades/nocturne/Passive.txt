@@ -1,0 +1,5 @@
+"Passive",
+"Umbral Blades",
+"periodicamente(podendo ser antecipado por ataques) o próximo ataque de nocturne causa dano em área e o cura baseado em quantos inimigos acertou.",
+"nenhum",
+"0"

@@ -1,0 +1,5 @@
+"Q",
+"Head Rush",
+"Briar salta em um inimgo causa dano e atordoa/aliado(aplica Crimson Curse).",
+"vida",
+"6% vida atual"

@@ -1,0 +1,5 @@
+"Q",
+"Duskbringer",
+"Nocturne lança uma sombra no alvo causando dano ao alvo, ganhando dano e velocidade de movimento.",
+"mana",
+"60"

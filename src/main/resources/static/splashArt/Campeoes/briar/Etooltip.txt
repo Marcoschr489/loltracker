@@ -1,0 +1,5 @@
+"E",
+"Chilling Scream",
+"Canaliza e ao terminar a canalização briar empurra inimigos na área causando dano",
+"vida",
+"6% da vida atual"

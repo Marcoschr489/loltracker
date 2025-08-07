@@ -1,0 +1,5 @@
+"R",
+"Paranoia",
+"1conjuração: Nocturne escurece todo o mapa reduzindo a visão de inimigos(impedindo de ver aliados).2 conjuração: se lança(durante lançamento até chegar ao alvo nocturne ativa passivamente Shroud of Darkness) ao alvo causando dano fisíco",
+"mana",
+"100"

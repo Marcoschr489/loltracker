@@ -1,0 +1,5 @@
+"W",
+"Biggest Snowball Ever!",
+"Willump começa a rolar uma bola de neve acumulando dano e velocidade de movimento.",
+"mana",
+"50"

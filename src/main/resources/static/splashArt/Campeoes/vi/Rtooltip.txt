@@ -1,0 +1,5 @@
+"R",
+"Cease and Desist",
+"Vi persegue um inimigo ao chegar no alvo o arremesa no chão causando dano.",
+"mana",
+"100"

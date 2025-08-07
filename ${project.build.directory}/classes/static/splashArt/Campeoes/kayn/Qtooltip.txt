@@ -1,0 +1,5 @@
+"Q",
+"Reaping Slash",
+"Avança e gira a foice causando dano em área.",
+"mana",
+"50"

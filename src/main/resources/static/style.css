@@ -1,0 +1,296 @@
+
+//form.html
+.bt-salvar:hover {
+background-color: #0056b3;
+}
+
+.bt-salvar {
+display: inline-block;
+padding: 10px 20px;
+font-size: 1rem;
+font-weight: 500;
+color: #fff;
+background-color: #007bff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.2s, transform 0.1s;
+}
+
+.bt-salvar:active {
+transform: scale(0.97);
+}
+
+.bt-salvar:disabled {
+background-color: #999;
+cursor: not-allowed;
+}
+
+.custom-input {
+width: 100%;
+max-width: 400px;
+padding: 10px 12px;
+font-size: 1rem;
+border: 2px solid #ccc;
+border-radius: 4px;
+transition: border-color 0.2s, box-shadow 0.2s;
+box-sizing: border-box;
+}
+
+.custom-input:focus {
+border-color: #007bff;
+outline: none;
+box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25  );
+}
+.habilidade {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    }
+
+.icone {
+    margin-right: 10px;
+    }
+
+.dados input {
+    display: block;
+    margin-bottom: 5px;
+    }
+
+.habilidade-bloco {
+    margin-bottom: 20px;
+    }
+
+.campos-com-icone {
+    display: flex;
+    align-items: center;
+    }
+
+.campos-texto {
+    flex: 1;
+    }
+
+.icone-habilidade {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 6px;
+    }
+
+.botao-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #3454D1;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    }
+
+.botao-voltar: hover {
+    background-color: #1f33a8;
+    }
+
+//lista.html
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+.background {
+    background-image: url('/Logo/league.jfif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    }
+
+.campeao-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    }
+
+button {
+    margin-left: 10px;
+}
+
+body {
+   background-image: url('/Logo/league.jfif');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   color: white;
+   font-family: Arial, sans-serif;
+   }
+
+.container {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+
+.card {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    position: relative;
+    text-align: center;
+    }
+
+.splash-recorte {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    }
+
+.habilidade {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    }
+
+.icone {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+    }
+
+.icone:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.containers {
+    padding: 2rem;
+    }
+
+.h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    }
+
+campeoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    }
+
+.card {
+    background-color: #161b22;
+    padding: 1rem;
+    border: 2px solid #30363d;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+.splashart {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    }
+
+.campeao-nome {
+    margin-top: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    }
+
+.habilidades {
+    margin-top: 0.5rem;
+    }
+
+.icone-habilidades {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    margin: 0 4px;
+    boder: 1px solid #444;
+}
+
+.icone-campeao {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.botao-novo {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color-white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+
+.botao-editar {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #1296F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+
+.icone {
+   width: 40px;
+   height: 30px;
+   object-fit: contain;
+   }
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-video {
+  display: none;
+  position: absolute;
+  top: 50%; /* aparece abaixo do ícone */
+  left: 150%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: 380px;
+  height: 250px;
+  background-color: #000;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  align-items: center;
+}
+
+.tooltip-container:hover .tooltip-video {
+  display: block;
+}

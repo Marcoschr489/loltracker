@@ -1,0 +1,5 @@
+"R",
+"Umbral Trespass",
+"Kayn pode possuir o campeão inimigo que tiver causado dano(3 seg), ao possuir o campeão kayn se torna inalvejável e ao final da duração causa dano.",
+"nenhum",
+"0"

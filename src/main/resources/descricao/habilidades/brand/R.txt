@@ -1,0 +1,5 @@
+"R",
+"Pyroclasm",
+"Brand Arremessa uma bola de fogo(aplica Blaze) que salta entre alvos(5x), causa lentidão em inimigos afetados por Blaze, prioriza campeões afetados por Blaze.",
+"mana",
+"100"

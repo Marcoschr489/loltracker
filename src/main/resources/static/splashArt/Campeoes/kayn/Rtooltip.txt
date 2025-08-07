@@ -1,0 +1,5 @@
+"R",
+"Umbral Trespass",
+"Kayn pode possuir o campeão inimigo que tiver causado dano, e ao final da duração causa dano.",
+"nenhum",
+"0"

@@ -1,0 +1,5 @@
+"W",
+"Living Shadow",
+"Zed invoca uma sombra que imita suas habilidades.",
+"energia",
+"40~20"

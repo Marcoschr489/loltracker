@@ -1,0 +1,5 @@
+"Q",
+"Obliterate",
+"Mordekaiser golpeia o alvo, se for 1 causa dano adicional.",
+"nenhum",
+"0"

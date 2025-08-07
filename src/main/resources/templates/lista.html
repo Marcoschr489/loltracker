@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Campeões Salvos</title>
+  <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<h1>Campeões Salvos</h1>
+
+<a href="/campeoes/novo">
+  <button class=" botao-novo">Novo Campeão</button>
+</a>
+<div class="campeoes-grid">
+  <div th:each="campeao : ${campeoes}" class="card">
+    <div class="nome" th:text="${campeao.nome}">Nome do Campeão</div>
+
+    <div class="detalhes">
+      <span><strong>Função:</strong> <span th:text="${campeao.role}">Função</span></span><br>
+      <span><strong>Lane:</strong> <span th:text="${campeao.lane}">Lane</span></span><br>
+    </div>
+
+    <div class="tooltip-container">
+      <img th:src="@{'/icones/' + ${#strings.toLowerCase(campeao.nome)} + '/icone.webp'}"
+           alt="Ícone do Campeão"
+           class="icone-campeao"
+           onerror="
+          this.onerror=null;
+          this.src=this.src.replace('.webp', '.png');
+          this.onerror=function() {
+              this.src=this.src.replace('.png', '.jpg');
+              this.onerror=function() {
+                  this.src=this.src.replace('.jpg', '.jfif');
+                  this.onerror=null;
+              };
+          };
+       " />
+      <th:block th:with="nome=${#strings.toLowerCase(campeao.nome)}">
+        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/q.webp'}"
+             class="icone habilidade-icone"
+             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='q'" />
+
+        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/w.webp'}"
+             class="icone habilidade-icone"
+             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='w'" />
+
+        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/e.webp'}"
+             class="icone habilidade-icone"
+             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='e'" />
+
+        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/r.webp'}"
+             class="icone habilidade-icone"
+             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='r'" />
+
+        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/passive.webp'}"
+             class="icone habilidade-icone"
+             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='passive'" />
+      </th:block>
+
+      <div class="tooltip-video">
+        <iframe width="460" height="215"
+                th:src="'https://www.youtube.com/embed/' + ${campeao.videoId}"
+                frameborder="0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <a th:href="@{'/campeoes/editar/' + ${campeao.id}}">
+      <button class="botao-editar">Editar</button>
+    </a>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.habilidade-icone').forEach(img => {
+    img.addEventListener('mouseenter', async () => {
+      const campeao = img.dataset.campeao;
+      const habilidade = img.dataset.habilidade.toUpperCase();
+      const url = `/splashArt/Campeoes/${campeao}/${habilidade}tooltip.txt`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Arquivo não encontrado');
+        const text = await response.text();
+        const linhas = text.split('\n');
+        const descricao = linhas[2] || 'Sem descrição';
+
+        img.title = descricao.replace(/"/g, '');
+      } catch (e) {
+        img.title = 'Descrição não encontrada';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

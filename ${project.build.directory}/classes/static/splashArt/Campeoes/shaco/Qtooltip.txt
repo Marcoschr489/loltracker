@@ -1,0 +1,5 @@
+"Q",
+"Deceive",
+"Shaco fica invísivel e teleporta, Seu próximo ataque básico dará dano crítico aumentado se for pelas costas.",
+"mana",
+"40"

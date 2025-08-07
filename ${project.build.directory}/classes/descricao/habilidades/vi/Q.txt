@@ -1,0 +1,5 @@
+"Q",
+"Vault Breaker",
+"Vi carrega um soco ao longo de alguns segundo que atordoa inimigos(aplica Denting Blows).",
+"mana",
+"50~90"

@@ -1,0 +1,5 @@
+"W",
+"Blood Frenzy",
+"1:Briar entra em um frenesi e ataca inimigos próximos,ganha velocidade de ataque.2: briar Morde o alvo e se cura causando dano",
+"vida",
+"6% vida atual"

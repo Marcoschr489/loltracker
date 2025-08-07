@@ -1,0 +1,5 @@
+"E",
+"Conflagration",
+"Incendeia um alvo e espalha fogo ao redor dele causando dano(aplica Blaze), caso o alvo esteja afetado por Blaze a área de propagação séra maior",
+"mana",
+"70~90"

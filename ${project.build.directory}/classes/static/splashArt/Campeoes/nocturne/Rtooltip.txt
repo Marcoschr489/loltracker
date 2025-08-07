@@ -1,0 +1,5 @@
+"R",
+"Paranoia",
+"1conjuração: Nocturne escurece todo o mapa.2conjuração: se lança em um alvo causando dano.",
+"mana",
+"100"

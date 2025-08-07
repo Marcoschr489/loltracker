@@ -1,0 +1,5 @@
+"Q",
+"Terrify",
+"Passivo:a primeira habilidade de fiddlesticks que acerta um campeão inimigo causará fear.Ativo:causa fear e dano no inimgo.",
+"mana",
+"65~85"

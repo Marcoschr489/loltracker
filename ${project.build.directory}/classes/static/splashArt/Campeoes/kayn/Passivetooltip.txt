@@ -1,0 +1,5 @@
+"Passive",
+"The Darkin Scythe",
+"Kayn pode evoluir durante a partida para, ShadowAssassin ou Rhaast.",
+"nenhum",
+"0"

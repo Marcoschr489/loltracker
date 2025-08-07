@@ -1,0 +1,5 @@
+"R",
+"Hallucinate",
+"Shaco desaparece brevemente e reparece com um clone(clone causa 75%do dano de shaco e recebe 120% de dano), depois da duração ou, ao morrer o clone explode(criando 3 caixas) causando dano em área e fear.",
+"mana",
+"100"

@@ -1,0 +1,5 @@
+"W",
+"Venom Cask",
+"Twitch joga um tonel de veneno na área alvo causando lentidão e dano.",
+"mana",
+"70"

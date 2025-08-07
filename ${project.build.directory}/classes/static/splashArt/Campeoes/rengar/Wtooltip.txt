@@ -1,0 +1,5 @@
+"W",
+"Battle Roar",
+"rengar se cura em uma % do dano recebido no último 1,5seg causando dano em área.",
+"ferocidade",
+"0~4"
