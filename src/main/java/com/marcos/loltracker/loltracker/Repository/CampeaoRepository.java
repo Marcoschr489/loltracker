@@ -8,4 +8,8 @@ import java.util.Optional;
 
 public interface CampeaoRepository extends JpaRepository<Campeao, Long> {
    Optional<Campeao> findByNomeIgnoreCase(String nome);
+
+   boolean existsByNomeIgnoreCase(String nome);
+
+   List<Campeao> findByLane(String lane);
 }
