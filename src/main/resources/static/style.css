@@ -227,19 +227,26 @@ campeoes-grid {
     }
 
 .icone-habilidades {
+    display: flex;
     width: 36px;
     height: 36px;
     border-radius: 5px;
-    margin: 0 4px;
-    boder: 1px solid #444;
+    margin-bottom:  10px;
+    justify-content: center;
 }
 
 .icone-campeao {
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 8px;
+  transition: box=shadow 0.3 ease; transform 0.3 ease;
+}
+
+.icone-campeao:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
 }
 
 .botao-novo {
@@ -263,15 +270,21 @@ campeoes-grid {
     cursor: pointer;
     }
 
-.icone {
+.habilidades-icon {
    width: 40px;
    height: 30px;
    object-fit: contain;
+   border-radius: 5px;
    }
 
 .tooltip-container {
-  position: relative;
-  display: inline-block;
+     background-color: #1e1e2f;
+     border-radius: 10px;
+     padding: 15px;
+     text-align: center;
+     width: 230px;
+     color: white;
+     font-family: sans-serif;
 }
 
 .tooltip-video {
@@ -294,3 +307,26 @@ campeoes-grid {
 .tooltip-container:hover .tooltip-video {
   display: block;
 }
+
+.maestria {
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  background-color: #000;
+  padding: 4px;
+  box-shadow: 0 0 10px gold;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+.maestria:hover {
+    box-shadow: 0 0 15px gold;
+    transform: scale(1.1);
+}
+
+.topo-info {
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    gap: 10px;
+    margin-bottom: 10px}

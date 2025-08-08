@@ -17,6 +17,7 @@
     <input type="text" th:field="*{role}" id="role">
     <label for="maestria">Maestria:</label>
     <input type="number" th:field="*{maestria}" id="maestria">
+    <img th:src="@{'/maestria/maestries/' + ${campeao.maestria} + '.jfif'}" alt="icone de maestria">
 
     <!-- Splash art -->
     <div id="splashContainer" style="margin-top: 20px;">
@@ -61,6 +62,7 @@
             }
         });
     }
+
 
     // Aguarda o DOM carregar
     document.addEventListener("DOMContentLoaded", function () {

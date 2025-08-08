@@ -159,6 +159,10 @@ public class CampeaoService {
     public String getVideoIdForCampeao(String nome) {
         return CampeaoService.videoMap.getOrDefault(nome.toLowerCase(), "defaultVideoId");
     }
+
+    public String getCaminhoIconeMaestria(int maestria) {
+        return "/maestria/maestria" + maestria + ".png";
+    }
 }
 
 

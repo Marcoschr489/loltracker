@@ -21,6 +21,8 @@
     </div>
 
     <div class="tooltip-container">
+      <img th:src="@{'/maestria/maestria' + ${campeao.maestria} + '.jfif'}"
+           class="maestria" alt="icone maestria" />
       <img th:src="@{'/icones/' + ${#strings.toLowerCase(campeao.nome)} + '/icone.webp'}"
            alt="Ícone do Campeão"
            class="icone-campeao"
@@ -55,6 +57,7 @@
         <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/passive.webp'}"
              class="icone habilidade-icone"
              th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='passive'" />
+
       </th:block>
 
       <div class="tooltip-video">
@@ -92,6 +95,8 @@
       } catch (e) {
         img.title = 'Descrição não encontrada';
       }
+      const maestria = campeao.maestria;
+      document.getElementById("icone-maestria").src = `/maestria/maestria${maestria}.jfif`;
     });
   });
 </script>

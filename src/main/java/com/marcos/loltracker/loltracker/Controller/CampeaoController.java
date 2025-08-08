@@ -37,7 +37,6 @@ public class CampeaoController {
     @PostMapping("/salvar")
     public String salvarCampeao(@ModelAttribute Campeao campeao) {
         String videoId = campeaoService.getVideoIdForCampeao(campeao.getNome());
-        campeao.setVideoId(videoId);
         campeaoRepository.save(campeao);
         return "redirect:/campeoes/lista";
     }

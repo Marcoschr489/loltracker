@@ -120,4 +120,9 @@ public class CampeaoHabilidadesDTO {
     public void setHabilidades(Map<String, HabilidadeDTO> habilidades) {
         this.habilidades = habilidades;
     }
+
+    public String iconeMaestria() {
+        return "/maestria/maestria" + maestria + ".png";
+    }
+
 }

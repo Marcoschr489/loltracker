@@ -1,6 +1,11 @@
 package com.marcos.loltracker.loltracker.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.io.File;
+
+
 
 public class ImagemUtil {
 
