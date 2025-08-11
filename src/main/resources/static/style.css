@@ -26,22 +26,110 @@ background-color: #999;
 cursor: not-allowed;
 }
 
-.custom-input {
-width: 100%;
-max-width: 400px;
-padding: 10px 12px;
-font-size: 1rem;
-border: 2px solid #ccc;
-border-radius: 4px;
-transition: border-color 0.2s, box-shadow 0.2s;
-box-sizing: border-box;
+.botao_dex {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    color: #00c2b2;
+    border: 2px solid #00c2b2;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    }
+
+.botao_dex::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00c2b2;
+    transition: left 0.3s ease;
+    z-index: -1;
 }
 
-.custom-input:focus {
-border-color: #007bff;
-outline: none;
-box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25  );
+.botao_dex:hover::before,
+.botao_dex:active::before {
+    left: 0;
+    }
+
+.botao_dex:hover,
+.botao_dex:active {
+    color: white;
+    transform: translatex(5px);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.input[type="text"], select {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: 2px solid #00c2b2;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: #fff;
+    outline: none;
+    background-color: transparent;
+    transition: ease-out 0.4s;
+    box-shadow inset 0 0 0 0 #00c2b2;
+}
+
+.input[type="text"]:focus, select:focus {
+    box-shadow: inset 400px 0 0 0 #00c2b2;
+    color: #162944;
+    background-color: #00c2b2;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    transition: ease-out 0.4s;
+}
+
+.input:focus::placeholder {
+    color: transparent;
+}
+
+.input[type="number"] {
+    border: 2px solid #1abc9c;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #0f1a2b;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+    }
+
+.input[type="number"]:focus {
+    border-color: #16f7cc;
+    box-shadow: 0 0 8px #16f7cc;
+    }
+
+.input[type="number"]::-webkit-outer-spin-button,
+.input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input[type="number"]::-webkit-inner-spin-button {
+    background-color: #1abc9c;
+    widht: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointers;
+}
+
+.input[type="number"] {
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    }
+
+.input[type="number"]:focus {
+    transform: scale(1.05);
+}
+
 .habilidade {
     display: flex;
     align-items: flex-start;
@@ -120,11 +208,22 @@ box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25  );
     }
 
 .campeao-card {
-    background-color: rgba(0, 0, 0, 0.6);
+    flex: 1;
+    background-color: rgba(0, 194, 178, 0.4);
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 194, 178, 0.4);
+    transition: transform 0.3s ease, shadow 0.3s ease;
+    color: white;
     }
+
+.campeao-card:hover {
+    transform: translatey(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 194, 178, 0,7);
+    background-color: rgba(0, 194, 178, 0.5);
+    cursor: pointer;
+}
 
 button {
     margin-left: 10px;
@@ -144,19 +243,10 @@ body {
     background-color: rgba(0,0,0,0.5);
     }
 
-.grid {
+campeoes.grid {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    }
-
-.card {
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-    position: relative;
-    text-align: center;
+    align-items: flex-start;
     }
 
 .splash-recorte {
@@ -249,26 +339,41 @@ campeoes-grid {
     transform: scale(1.05);
 }
 
-.botao-novo {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color-white;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    }
-
 .botao-editar {
-    margin-top: 10px;
-    padding: 6px 12px;
-    background-color: #1296F3;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    }
+     position: relative;
+     overflow: hidden;
+     background-color: white;
+     color: #00c2b2;
+     border: 2px solid #00c2b2;
+     padding: 10px 20px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: color 0.3s ease;
+     }
+
+ .botao-editar::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background-color: #00c2b2;
+     transition: left 0.3s ease;
+     z-index: -1;
+ }
+
+ .botao-editar:hover::before,
+ .botao-editar:active::before {
+     left: 0;
+     }
+
+ .botao-editar:hover,
+ .botao-editar:active {
+     color: white;
+     transform: translatex(5px);
+     transition: transform 0.3s ease, color 0.3s ease;
+ }
 
 .habilidades-icon {
    width: 40px;
@@ -278,34 +383,22 @@ campeoes-grid {
    }
 
 .tooltip-container {
-     background-color: #1e1e2f;
-     border-radius: 10px;
-     padding: 15px;
-     text-align: center;
-     width: 230px;
-     color: white;
-     font-family: sans-serif;
+    display: inline-block;
+    position: relative;
 }
 
 .tooltip-video {
-  display: none;
   position: absolute;
-  top: 50%; /* aparece abaixo do ícone */
-  left: 150%;
-  transform: translateX(-50%);
-  z-index: 999;
-  width: 380px;
-  height: 250px;
-  background-color: #000;
-  border: 1px solid #ccc;
+  top: 60%; /* aparece abaixo do ícone */
+  left: 100%;
+  transform: none;
+  z-index: 1000;
+  width:300px;
+  height: 180px;
+  background: black;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  align-items: center;
-}
-
-.tooltip-container:hover .tooltip-video {
-  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  flex-shrink: 0;
 }
 
 .maestria {
@@ -330,3 +423,22 @@ campeoes-grid {
     align-item: center;
     gap: 10px;
     margin-bottom: 10px}
+
+.button_slide {
+    color: #fff;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 0px;
+    padding: 12px 24px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #d80286;
+    transition: ease-out 0.4s;
+    background: none;
+    }
+
+.slide_-right:hover {
+    box-shadow: inset 400px 0 0 0 #d80286;
+}

@@ -10,14 +10,19 @@
 
 <form th:action="@{/campeoes/salvar}" method="post" th:object="${campeao}">
     <label for="nome">Nome do Campeão:</label>
-    <input type="text" th:field="*{nome}" id="nome">
+    <input type="text" class="input" th:field="*{nome}" id="nome">
+
     <label for="lane">Lane:</label>
-    <input type="text" th:field="*{lane}" id="lane">
+    <input type="text" class="input" th:field="*{lane}" id="lane">
+
     <label for="role">Função (role):</label>
-    <input type="text" th:field="*{role}" id="role">
+    <input type="text" class="input" th:field="*{role}" id="role">
+
     <label for="maestria">Maestria:</label>
-    <input type="number" th:field="*{maestria}" id="maestria">
-    <img th:src="@{'/maestria/maestries/' + ${campeao.maestria} + '.jfif'}" alt="icone de maestria">
+    <input type="number" class="input" th:field="*{maestria}" id="maestria">
+
+    <img th:src="@{'/maestria/' + ${campeao.maestria} + '.jfif'}" alt="icone de maestria">
+
 
     <!-- Splash art -->
     <div id="splashContainer" style="margin-top: 20px;">
@@ -33,7 +38,27 @@
     </div>
 
     <a href="/lista" class="botao-voltar">Ver Campeões</a>
-    <button type="submit">Salvar Campeão</button>
+    <button type="submit" class="botao_slide slide_right">Salvar Campeão</button>
+    <style>
+    .botao_slide {
+          color: #FFF;
+          border: 2px solid #00c2b2;
+          border-radius: 0px;
+          padding: 12px 24px;
+          display: inline-block;
+          font-family: "Lucida Console", Monaco, monospace;
+          font-size: 14px;
+          letter-spacing: 1px;
+          cursor: pointer;
+          box-shadow: inset 0 0 0 0 #2d3e3e;
+          transition: ease-out 0.4s;
+          background: none;
+}
+
+    .slide_right:hover {
+        box-shadow: inset 200px 0 0 0 #2d3e3e;
+}
+</style>
 </form>
 
 <script>

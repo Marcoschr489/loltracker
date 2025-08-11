@@ -9,10 +9,10 @@
 <h1>Campeões Salvos</h1>
 
 <a href="/campeoes/novo">
-  <button class=" botao-novo">Novo Campeão</button>
+  <button type="button" class=" botao_dex ">Novo Campeão</button>
 </a>
 <div class="campeoes-grid">
-  <div th:each="campeao : ${campeoes}" class="card">
+  <div th:each="campeao : ${campeoes}" class="campeao-card">
     <div class="nome" th:text="${campeao.nome}">Nome do Campeão</div>
 
     <div class="detalhes">
@@ -61,7 +61,7 @@
       </th:block>
 
       <div class="tooltip-video">
-        <iframe width="460" height="215"
+        <iframe width="380" height="215"
                 th:src="'https://www.youtube.com/embed/' + ${campeao.videoId}"
                 frameborder="0"
                 title="YouTube video player"
@@ -72,7 +72,7 @@
       </div>
     </div>
     <a th:href="@{'/campeoes/editar/' + ${campeao.id}}">
-      <button class="botao-editar">Editar</button>
+      <button type="button" class="botao-editar">Editar</button>
     </a>
   </div>
 </div>
@@ -98,7 +98,30 @@
       const maestria = campeao.maestria;
       document.getElementById("icone-maestria").src = `/maestria/maestria${maestria}.jfif`;
     });
+document.querySelectorAll('.tooltip-container').forEach(container => {
+  const icon = container.querySelector('.icone-video');
+  const tooltip = container.querySelector('.tooltip-video');
+  const videoId = container.getAttribute('data-videoid');
+
+  function abrirTooltip() {
+    tooltip.innerHTML = `<iframe width="320" height="180" src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    tooltip.style.display = 'inline-block';
+  }
+
+  function fecharTooltip() {
+    tooltip.style.display = 'none';
+    tooltip.innerHTML = ''; // limpa o iframe para parar o vídeo
+  }
+
+  icon.addEventListener('mouseenter', abrirTooltip);
+
+  document.addEventListener('click', (e) => {
+    if (!container.contains(e.target)) {
+      fecharTooltip());
+    }
   });
+});
+
 </script>
 
 </body>
