@@ -1,5 +1,0 @@
-"W",
-"Pillar of Flame",
-"explode uma área após um atraso",
-"mana",
-"60~100"

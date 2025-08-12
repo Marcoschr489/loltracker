@@ -1,5 +1,0 @@
-"R",
-"Death Mark",
-"Zed marca um inimigo(por 3 seg) para morrer, durante este efeito parte do dano causado é repetido no final da duração.",
-"nenhum",
-"0"

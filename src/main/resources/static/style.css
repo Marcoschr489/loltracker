@@ -159,10 +159,11 @@ cursor: not-allowed;
     }
 
 .icone-habilidade {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin-left: 10px;
     border-radius: 6px;
+    margin-bottom: 20px;
     }
 
 .botao-voltar {

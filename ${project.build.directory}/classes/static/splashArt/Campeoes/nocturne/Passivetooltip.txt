@@ -1,5 +1,0 @@
-"Passive",
-"Umbral Blades",
-"periodicamente o próximo ataque de nocturne causa dano em área e o cura.",
-"nenhum",
-"0"

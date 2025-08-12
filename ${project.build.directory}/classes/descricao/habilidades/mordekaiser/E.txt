@@ -1,5 +1,0 @@
-"E",
-"Death's Grasp",
-"Passivo:concede penetração % mágica.Ativo: mordekaiser envia uma garra a frente(área de retângulo) que puxa inimigos no caminho e causa dano",
-"nenhum",
-"0"

@@ -1,5 +1,0 @@
-"W",
-"Denting Blows",
-"A cada 3 instancias de dano Vi reduz a armadura do alvo e causa dano adicional baseado na vida, concedendo velocidade de ataque.",
-"nenhum",
-"0"

@@ -1,5 +1,0 @@
-"E",
-"Relentless Force",
-"Vi causa dano em área com seus socos reforçados.",
-"mana",
-"50"

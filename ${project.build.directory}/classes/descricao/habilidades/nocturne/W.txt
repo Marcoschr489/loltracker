@@ -1,5 +1,0 @@
-"W",
-"Shroud of Darkness",
-"Passivo: nocturne ganha velocidade de ataque.Ativo: nocturne se envolve em sombras que bloqueiam a próxima habilidade inimiga(se conseguir bloquear, dobra a velocidade de ataque passiva)",
-"mana",
-"50"

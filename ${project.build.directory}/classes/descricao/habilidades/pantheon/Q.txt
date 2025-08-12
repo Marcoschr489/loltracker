@@ -1,5 +1,0 @@
-"Q",
-"Comet Spear",
-"Crava ou Arremesa uma lança no inimigo causando dano, se o inimigo estiver com abaixo de 20% de vida, causará dano crítico.",
-"mana",
-"30~50"

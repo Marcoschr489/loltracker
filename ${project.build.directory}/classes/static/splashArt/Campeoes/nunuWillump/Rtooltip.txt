@@ -1,5 +1,0 @@
-"R",
-"Absolute Zero",
-"Willump canaliza ao longo de 4seg uma área que causa slow e ao fim da duração dano.",
-"mana",
-"100"

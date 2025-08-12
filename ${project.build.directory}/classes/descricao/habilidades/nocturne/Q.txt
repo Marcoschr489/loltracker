@@ -1,5 +1,0 @@
-"Q",
-"Duskbringer",
-"Nocturne lança uma sombra no alvo(o alvo acertado deixa um rastro pela duração) causando dano e ganhando dano e velocidade de movimento pelo rastro deixado.",
-"mana",
-"60"

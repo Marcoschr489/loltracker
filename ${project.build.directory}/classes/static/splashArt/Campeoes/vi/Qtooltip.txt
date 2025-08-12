@@ -1,5 +1,0 @@
-"Q",
-"Vault Breaker",
-"Vi carrega um soco ao longo de alguns segundo que atordoa inimigos.",
-"mana",
-"50~90"

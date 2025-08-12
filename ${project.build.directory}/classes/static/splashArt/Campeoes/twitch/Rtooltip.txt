@@ -1,5 +1,0 @@
-"R",
-"Spray and Pray",
-"Twitch recebe dano e alcante além de seus ataques atravessarem os alvos.",
-"mana",
-"100"

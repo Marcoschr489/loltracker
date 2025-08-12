@@ -1,5 +1,0 @@
-"Q",
-"Savagery",
-"Próximo ataque de rengar causará dano adicional e concederá velocidade de ataque.",
-"ferocidade",
-"0~4"

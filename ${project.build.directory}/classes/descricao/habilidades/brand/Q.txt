@@ -1,5 +1,0 @@
-"Q",
-"Sear",
-"Lança(em linha reta) um projétil incandescente que causa dano(aplica Blaze), caso o alvo esteja afetado por Blaze será atordoado.",
-"mana",
-"70"

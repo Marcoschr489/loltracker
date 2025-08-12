@@ -1,5 +1,0 @@
-"E",
-"Reap",
-"Fiddlesticks golpeia com sua foice, causa dano, lentidão e silenciamento",
-"mana",
-"40~60"

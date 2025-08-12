@@ -1,5 +1,0 @@
-"W",
-"Blade's Reach",
-"Golpeia em linha reta(retângulo)causando slow.",
-"mana",
-"60~80"

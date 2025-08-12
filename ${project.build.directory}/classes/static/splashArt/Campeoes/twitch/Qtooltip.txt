@@ -1,5 +1,0 @@
-"Q",
-"Ambush",
-"Twitch ganha velocidade de movimento e fica camuflado e ao sair da camuflagem ganha velocidade de ataque.",
-"mana",
-"40"

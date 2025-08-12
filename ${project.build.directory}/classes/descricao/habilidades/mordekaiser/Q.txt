@@ -1,5 +1,0 @@
-"Q",
-"Obliterate",
-"Mordekaiser golpeia(área em cone) o alvo(se for 1 causa dano adicional) causando dano mágico.",
-"nenhum",
-"0"

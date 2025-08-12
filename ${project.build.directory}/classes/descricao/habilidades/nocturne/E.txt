@@ -1,5 +1,0 @@
-"E",
-"Unspeakable Horror",
-"Nocturne envolve o alvo em um pesadelo causando dano magico, caso o alvo permaneça no raio de ação recebe fear no final da habilidade.",
-"mana",
-"50"

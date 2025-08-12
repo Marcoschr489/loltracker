@@ -1,5 +1,0 @@
-"R",
-"Crowstorm",
-"Canaliza(2seg) e depois se teleporta para o local alvo causando dano em área ao longo da duração.",
-"mana",
-"100"

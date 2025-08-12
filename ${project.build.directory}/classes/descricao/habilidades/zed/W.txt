@@ -1,5 +1,0 @@
-"W",
-"Living Shadow",
-"Passivo:acerta inimigos com habilidades usando Living Shadow reduz o cd da habilidade e restaura energia.Ativo:zed invoca uma sombra que imita suas habilidades.",
-"energia",
-"40~20"

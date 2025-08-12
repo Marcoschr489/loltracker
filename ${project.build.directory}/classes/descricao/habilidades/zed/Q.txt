@@ -1,5 +1,0 @@
-"Q",
-"Razor Shuriken",
-"Zed lança uma shuriken que causa dano a todos os inimigos atravessados.",
-"energia",
-"75~55"

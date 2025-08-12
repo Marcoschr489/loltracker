@@ -1,5 +1,0 @@
-"W",
-"Shield Vault",
-"Salta no inimigo, atordoa e golpeia.",
-"mana",
-"40"

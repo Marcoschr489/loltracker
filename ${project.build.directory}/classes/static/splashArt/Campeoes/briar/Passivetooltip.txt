@@ -1,5 +1,0 @@
-"Passive"
-"Crimson Curse"
-"ataques aplicam sangramento acumulando(7x) e curando briar."
-"sem recurso"
-"sem custo"

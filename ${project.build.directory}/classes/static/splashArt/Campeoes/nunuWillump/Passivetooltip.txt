@@ -1,5 +1,0 @@
-"Passive",
-"Call of the Freljord",
-"Concede velocidade de ataque e movimento ao atacar campeões ou monstros.",
-"nenhum",
-"0"

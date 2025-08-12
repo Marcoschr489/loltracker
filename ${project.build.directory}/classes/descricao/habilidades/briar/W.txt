@@ -1,5 +1,0 @@
-"W",
-"Blood Frenzy",
-"1:Briar entra em um frenesi(não é possível controllar, pode ser cancelado usando E Chilling Scream) e ataca inimigos(prioriza campeões) próximos,ganha velocidade de ataque além de causar dano em área.2: briar Morde o alvo e se cura(aumenta baseado na vida faltante de Briar) causando dano(baseado na vida faltante do alvo)",
-"vida",
-"6% vida atual"

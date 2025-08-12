@@ -1,5 +1,0 @@
-"Passive",
-"Mortal Will",
-"Ataques e habilidade de pantheon acumulam determinação até um total de 5, com 5 acúmulos a próxima habilidade é fortalecida.",
-"nenhum",
-"0"

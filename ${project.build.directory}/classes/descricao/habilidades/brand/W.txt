@@ -1,5 +1,0 @@
-"W",
-"Pillar of Flame",
-"Explode uma área depois de 1 seg, causando dano(aplica Blaze), caso o alvo esteja afetado por Blaze, o dano será maior.",
-"mana",
-"60~100"

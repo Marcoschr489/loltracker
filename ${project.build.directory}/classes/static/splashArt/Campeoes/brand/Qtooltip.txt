@@ -1,5 +1,0 @@
-"Q",
-"Sear",
-"Lança uma bola de fogo",
-"mana",
-"70"

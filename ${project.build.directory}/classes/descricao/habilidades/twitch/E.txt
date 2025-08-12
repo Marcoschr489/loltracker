@@ -1,5 +1,0 @@
-"E",
-"Contaminate",
-"causa dano baseado nos acumulos de Deadly Poison",
-"mana",
-"50"

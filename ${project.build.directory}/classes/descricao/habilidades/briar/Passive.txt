@@ -1,5 +1,0 @@
-"Passive"
-"Crimson Curse"
-"Briar não tem regeneração de vida, em vez disso ataques aplicam sangramento acumulando(7x) e curando briar(dano causado a campeões ou monstros também curam)."
-"sem recurso"
-"sem custo"

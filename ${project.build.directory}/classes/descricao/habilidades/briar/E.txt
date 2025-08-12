@@ -1,5 +1,0 @@
-"E",
-"Chilling Scream",
-"Canaliza(recebendo redução de dano e cura ao longo do tempo) ao terminar a canalização briar empurra(atordoa caso empurrado contra estruturas) inimigos na área causando dano(aplica Crimson Curse)",
-"vida",
-"6% da vida atual"

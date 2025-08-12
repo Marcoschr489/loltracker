@@ -1,5 +1,0 @@
-"Passive",
-"Contempt for the Weak",
-"Causa dano adicional a inimigos com pouca vida.",
-"nenhum",
-"0"

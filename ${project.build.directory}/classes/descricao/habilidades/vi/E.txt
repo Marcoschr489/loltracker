@@ -1,5 +1,0 @@
-"E",
-"Relentless Force",
-"Vi causa dano em área(ao alvo e atrás dele) com seus socos reforçados(aplica Denting Blows).",
-"mana",
-"50"

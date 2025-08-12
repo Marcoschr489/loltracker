@@ -1,5 +1,0 @@
-"W",
-"Jack in the box",
-"Shaco posiciona uma caixa que se arma e fica invísivel após 2 segs, inimigos que passarem por perto sofrerão brevemente fear e dano magico enquanto permanecer na aréa de efeito.",
-"mana",
-"50~70"

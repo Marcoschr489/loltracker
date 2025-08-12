@@ -1,5 +1,0 @@
-"R",
-"Certain Death",
-"Lança um projétil que para no primeiro campeão inimigo e causa dano, depois de acertar avança até o alvo ganhando Blood Frenzy(além de roubo de vida, dano, armadura, resistência mágica, velocidade de movimento/ataque) e perseguindo o alvo até mata-lo.",
-"nenhum",
-"0"

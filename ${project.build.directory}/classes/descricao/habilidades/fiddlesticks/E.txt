@@ -1,5 +1,0 @@
-"E",
-"Reap",
-"Fiddlesticks balança sua foice, causa lentidão e silenciamento",
-"mana",
-"40~60"

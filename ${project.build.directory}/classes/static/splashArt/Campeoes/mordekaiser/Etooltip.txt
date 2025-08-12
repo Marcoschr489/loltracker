@@ -1,5 +1,0 @@
-"E",
-"Death's Grasp",
-"Mordekaiser envia uma garra a frente que puxa inimigos no caminho e causa dano",
-"nenhum",
-"0"

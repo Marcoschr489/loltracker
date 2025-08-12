@@ -1,5 +1,0 @@
-"Passive",
-"Mortal Will",
-"Ataques e habilidade de pantheon acumulam determinação que fortalece a próxima habilidade.",
-"nenhum",
-"0"

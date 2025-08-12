@@ -1,5 +1,0 @@
-"E",
-"Shadow Step",
-"Kayn ganha velocidade de movimento e pode atravessar estruturas, se cura ao fazer isso",
-"mana",
-"70~90"

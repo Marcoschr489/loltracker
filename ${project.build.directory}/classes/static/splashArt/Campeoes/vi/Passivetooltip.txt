@@ -1,5 +1,0 @@
-"Passive",
-"Blast Shield",
-"Concede um escudo ao usar habilidades.",
-"nenhum",
-"0"
