@@ -13,6 +13,8 @@
 </a>
 <div class="campeoes-grid">
   <div th:each="campeao : ${campeoes}" class="campeao-card">
+    <button class="btnDetalhes" data-nome="[[${campeao.nome}]]">Ver Detalhes</button>
+
     <div class="nome" th:text="${campeao.nome}">Nome do Campeão</div>
 
     <div class="detalhes">
@@ -37,6 +39,15 @@
               };
           };
        " />
+      <div id="modalDetalhes" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span id="fecharModel" class="close">&times;</span>
+          <h2 id="nomeCampeao"></h2>
+          <img id="splashArt" src="" alt="splash" style="max-widht:100%">
+          <div id="habilidades"></div>
+          <p id="statisticas"></p>
+        </div>
+      </div>
       <th:block th:with="nome=${#strings.toLowerCase(campeao.nome)}">
         <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/q.webp'}"
              class="icone habilidade-icone"
@@ -95,6 +106,41 @@
       document.getElementById("icone-maestria").src = `/maestria/maestria${maestria}.jfif`;
     });
   });
+  document.querySelectorAll('.btnDetalhes').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const nome = this.dataset.nome;
+        console.log("Buscando campeão:", nome);
+
+        fetch(`/campeao/${nome}`)
+            .then(res => {
+                  if (!res.ok) throw new Error("Campeão não encontrado");
+                  return res.json();
+            })
+            .then(data => {
+                  console.log("Dados do campeão:", data);
+                  document.getElementById('nomeCampeao').textContent = data.nome;
+                  document.getElementById('splashCampeao').src = `/splashArt/Campeoes/${data.nome.toLowerCase()}/splash.png`;
+            })
+            .catch(err => console.error(err));
+            });
+                  // habilidades
+                  const habilidadesDiv = document.getElementById('habilidades');
+                  habilidadesDiv.innerHTML = '';
+                  data.habilidades.forEach(hab => {
+                      habilidadesDiv.innerHTML += `<p><strong>${hab.nome}</strong>: ${hab.descricao}</p>`;
+                  });
+
+                // estatísticas
+                document.getElementById('estatisticas').textContent =
+                    `Role: ${data.role}, Lane: ${data.lane}, Maestria: ${data.maestria}`;
+
+                document.getElementById('modalDetalhes').style.display = 'block';
+            });
+
+
+document.getElementById('fecharModal').addEventListener('click', function() {
+    document.getElementById('modalDetalhes').style.display = 'none';
+});
 
 </script>
 

@@ -1,4 +1,5 @@
 package com.marcos.loltracker.loltracker.Service;
+import com.marcos.loltracker.loltracker.DTO.CampeaoDTO;
 import com.marcos.loltracker.loltracker.DTO.CampeaoHabilidadesDTO;
 import com.marcos.loltracker.loltracker.DTO.HabilidadeDTO;
 import com.marcos.loltracker.loltracker.Model.Campeao;
@@ -42,7 +43,7 @@ public class CampeaoService {
     }
 
     //busca por nome
-    public Optional<Campeao> buscarPorNome(String nome) {
+    public CampeaoHabilidadesDTO buscarPorNome(String nome) {
         return campeaoRepository.findByNomeIgnoreCase(nome);
     }
 
@@ -162,6 +163,20 @@ public class CampeaoService {
 
     public String getCaminhoIconeMaestria(int maestria) {
         return "/maestria/maestria" + maestria + ".png";
+    }
+
+    private List<CampeaoDTO> campeoes = new ArrayList<>();
+    public void salvar(CampeaoDTO campeao) {
+        campeoes.add(campeao);
+    }
+
+    public CampeaoDTO buscarPorNomes(String nome) {
+        for (CampeaoDTO c : campeoes) {
+            if (c.getNome().equalsIgnoreCase(nome)) {
+                return c;
+            }
+        }
+        return null;
     }
 }
 

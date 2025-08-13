@@ -1,5 +1,7 @@
 package com.marcos.loltracker.loltracker.Controller;
 
+import com.marcos.loltracker.loltracker.DTO.CampeaoDTO;
+import com.marcos.loltracker.loltracker.DTO.CampeaoHabilidadesDTO;
 import com.marcos.loltracker.loltracker.DTO.HabilidadeDTO;
 import com.marcos.loltracker.loltracker.Model.Campeao;
 import com.marcos.loltracker.loltracker.Model.Habilidade;
@@ -7,6 +9,7 @@ import com.marcos.loltracker.loltracker.Repository.CampeaoRepository;
 import com.marcos.loltracker.loltracker.Service.CampeaoService;
 import com.marcos.loltracker.loltracker.Service.HabilidadeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -125,5 +128,16 @@ public class CampeaoController {
     public String novoCampeao(Model model) {
         model.addAttribute("campeao", new Campeao());
         return "novo";
+    }
+
+    @GetMapping("/campeao/{nome}")
+    @ResponseBody
+    public ResponseEntity<CampeaoDTO> buscarPorNomes(@PathVariable String nome) {
+        CampeaoDTO dto = campeaoService.buscarPorNomes(nome);
+        if (dto == null) {
+            return ResponseEntity.ok(dto);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 }
