@@ -29,6 +29,7 @@ public class CampeaoController {
 
     @Autowired
     private CampeaoRepository campeaoRepository;
+
     // ✅ Página de cadastro de campeão (formulário)
     @GetMapping("/novo")
     public String novo(Model model) {
@@ -132,12 +133,12 @@ public class CampeaoController {
 
     @GetMapping("/campeao/{nome}")
     @ResponseBody
-    public ResponseEntity<CampeaoDTO> buscarPorNomes(@PathVariable String nome) {
+    public ResponseEntity<CampeaoDTO> buscarPorNome(@PathVariable String nome) {
         CampeaoDTO dto = campeaoService.buscarPorNomes(nome);
         if (dto == null) {
             return ResponseEntity.ok(dto);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 }

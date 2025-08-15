@@ -12,4 +12,6 @@ public interface CampeaoRepository extends JpaRepository<Campeao, Long> {
    boolean existsByNomeIgnoreCase(String nome);
 
    List<Campeao> findByLane(String lane);
+
+
 }

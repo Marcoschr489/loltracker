@@ -114,6 +114,13 @@ public class CampeaoHabilidadesDTO {
     public void setHabilidades(List<HabilidadeDTO> habilidadesList) {
         for (HabilidadeDTO habilidade : habilidadesList) {
             this.habilidades.put(habilidade.getTipo(), habilidade);
+/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
+    /**
+     * Sets the habilidades of this object using a list of {@link HabilidadeDTO}s.
+     *
+     * @param habilidadesList a list of {@link HabilidadeDTO}s to set
+     */
+/* <<<<<<<<<<  e4d2e082-73dd-4bb7-9779-32605d4b0403  >>>>>>>>>>> */
         }
     }
 

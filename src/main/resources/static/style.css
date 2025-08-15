@@ -128,7 +128,7 @@ cursor: not-allowed;
 
 .input[type="number"]:focus {
     transform: scale(1.05);
-}
+    }
 
 .habilidade {
     display: flex;
@@ -198,7 +198,7 @@ cursor: not-allowed;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 2;
 }
 
 .content {
@@ -440,7 +440,7 @@ campeoes-grid {
     background: none;
     }
 
-.slide_-right:hover {
+.slide_right:hover {
     box-shadow: inset 400px 0 0 0 #d80286;
 }
 
@@ -471,3 +471,43 @@ campeoes-grid {
     font-size: 20px;
     cursor: pointer;
     }
+
+.botao-save {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    color: #00c2b2;
+    border: 2px solid #00c2b2;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-save span {
+    position: relative;
+    z-index: 2; /* texto sempre na frente */
+}
+
+.botao-save::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00c2b2;
+    transition: left 0.3s ease;
+    z-index: 1; /* não usa mais negativo */
+}
+
+.botao-save:hover::before,
+.botao-save:active::before {
+    left: 0;
+}
+
+.botao-save:hover,
+.botao-save:active {
+    color: white;
+    transform: translateX(5px); /* corrigi o X maiúsculo */
+}

@@ -9,140 +9,86 @@
 <h1>Campeões Salvos</h1>
 
 <a href="/campeoes/novo">
-  <button type="button" class=" botao_dex ">Novo Campeão</button>
+  <button type="button" class="botao_dex">Novo Campeão</button>
 </a>
+
 <div class="campeoes-grid">
   <div th:each="campeao : ${campeoes}" class="campeao-card">
-    <button class="btnDetalhes" data-nome="[[${campeao.nome}]]">Ver Detalhes</button>
+    <button class="btnDetalhes" th:attr="data-nome=${campeao.nome}">Ver Detalhes</button>
 
     <div class="nome" th:text="${campeao.nome}">Nome do Campeão</div>
 
     <div class="detalhes">
-      <span><strong>Função:</strong> <span th:text="${campeao.role}">Função</span></span><br>
+      <span><strong>Role:</strong> <span th:text="${campeao.role}">Role</span></span><br>
       <span><strong>Lane:</strong> <span th:text="${campeao.lane}">Lane</span></span><br>
     </div>
 
     <div class="tooltip-container">
       <img th:src="@{'/maestria/maestria' + ${campeao.maestria} + '.jfif'}"
            class="maestria" alt="icone maestria" />
+
       <img th:src="@{'/icones/' + ${#strings.toLowerCase(campeao.nome)} + '/icone.webp'}"
            alt="Ícone do Campeão"
            class="icone-campeao"
            onerror="
-          this.onerror=null;
-          this.src=this.src.replace('.webp', '.png');
-          this.onerror=function() {
-              this.src=this.src.replace('.png', '.jpg');
+              this.onerror=null;
+              this.src=this.src.replace('.webp', '.png');
               this.onerror=function() {
-                  this.src=this.src.replace('.jpg', '.jfif');
-                  this.onerror=null;
+                  this.src=this.src.replace('.png', '.jpg');
+                  this.onerror=function() {
+                      this.src=this.src.replace('.jpg', '.jfif');
+                      this.onerror=null;
+                  };
               };
-          };
-       " />
+           " />
+
+      <!-- Modal -->
       <div id="modalDetalhes" class="modal" style="display: none;">
         <div class="modal-content">
-          <span id="fecharModel" class="close">&times;</span>
+          <span id="fecharModal" class="close">&times;</span>
           <h2 id="nomeCampeao"></h2>
-          <img id="splashArt" src="" alt="splash" style="max-widht:100%">
+          <img id="splashArt" src="" alt="splash" style="max-width:100%">
           <div id="habilidades"></div>
-          <p id="statisticas"></p>
+          <p id="descricao"></p>
+          </div>
+        </div>
+          <img th:src="@{/assets/{nome}/lol.gif(nome=${campeao.nome.toLowerCase()})}"
+               alt="Gif do Campeão"
+               style="width: 150px;">
         </div>
       </div>
+
+      <!-- Habilidades -->
       <th:block th:with="nome=${#strings.toLowerCase(campeao.nome)}">
-        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/q.webp'}"
+        <img th:src="@{'/splashArt/Campeoes/' + ${nome} + '/q.webp'}"
              class="icone habilidade-icone"
-             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='q'" />
+             th:attr="data-campeao=${nome}, data-habilidade='q'" />
 
-        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/w.webp'}"
+        <img th:src="@{'/splashArt/Campeoes/' + ${nome} + '/w.webp'}"
              class="icone habilidade-icone"
-             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='w'" />
+             th:attr="data-campeao=${nome}, data-habilidade='w'" />
 
-        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/e.webp'}"
+        <img th:src="@{'/splashArt/Campeoes/' + ${nome} + '/e.webp'}"
              class="icone habilidade-icone"
-             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='e'" />
+             th:attr="data-campeao=${nome}, data-habilidade='e'" />
 
-        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/r.webp'}"
+        <img th:src="@{'/splashArt/Campeoes/' + ${nome} + '/r.webp'}"
              class="icone habilidade-icone"
-             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='r'" />
+             th:attr="data-campeao=${nome}, data-habilidade='r'" />
 
-        <img th:src="@{'/splashArt/Campeoes/' + ${#strings.toLowerCase(campeao.nome)} + '/passive.webp'}"
+        <img th:src="@{'/splashArt/Campeoes/' + ${nome} + '/passive.webp'}"
              class="icone habilidade-icone"
-             th:attr="data-campeao=${#strings.toLowerCase(campeao.nome)}, data-habilidade='passive'" />
-
+             th:attr="data-campeao=${nome}, data-habilidade='passive'" />
       </th:block>
-<tr th:each="campeao : ${campeoes}">
-  <td th:text="${campeao.nome}"></td>
-  <td>
-    <img th:src="@{/assets/{nome}/lol.gif(nome=${campeao.nome.toLowerCase()})}"
-         alt="Gif do campeão" style="widht:150px;">
-  </td>
-</tr>
     </div>
+
     <a th:href="@{'/campeoes/editar/' + ${campeao.id}}">
       <button type="button" class="botao-editar">Editar</button>
     </a>
   </div>
 </div>
 
-<script>
-  document.querySelectorAll('.habilidade-icone').forEach(img => {
-    img.addEventListener('mouseenter', async () => {
-      const campeao = img.dataset.campeao;
-      const habilidade = img.dataset.habilidade.toUpperCase();
-      const url = `/splashArt/Campeoes/${campeao}/${habilidade}tooltip.txt`;
-
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error('Arquivo não encontrado');
-        const text = await response.text();
-        const linhas = text.split('\n');
-        const descricao = linhas[2] || 'Sem descrição';
-
-        img.title = descricao.replace(/"/g, '');
-      } catch (e) {
-        img.title = 'Descrição não encontrada';
-      }
-      const maestria = campeao.maestria;
-      document.getElementById("icone-maestria").src = `/maestria/maestria${maestria}.jfif`;
-    });
-  });
-  document.querySelectorAll('.btnDetalhes').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const nome = this.dataset.nome;
-        console.log("Buscando campeão:", nome);
-
-        fetch(`/campeao/${nome}`)
-            .then(res => {
-                  if (!res.ok) throw new Error("Campeão não encontrado");
-                  return res.json();
-            })
-            .then(data => {
-                  console.log("Dados do campeão:", data);
-                  document.getElementById('nomeCampeao').textContent = data.nome;
-                  document.getElementById('splashCampeao').src = `/splashArt/Campeoes/${data.nome.toLowerCase()}/splash.png`;
-            })
-            .catch(err => console.error(err));
-            });
-                  // habilidades
-                  const habilidadesDiv = document.getElementById('habilidades');
-                  habilidadesDiv.innerHTML = '';
-                  data.habilidades.forEach(hab => {
-                      habilidadesDiv.innerHTML += `<p><strong>${hab.nome}</strong>: ${hab.descricao}</p>`;
-                  });
-
-                // estatísticas
-                document.getElementById('estatisticas').textContent =
-                    `Role: ${data.role}, Lane: ${data.lane}, Maestria: ${data.maestria}`;
-
-                document.getElementById('modalDetalhes').style.display = 'block';
-            });
-
-
-document.getElementById('fecharModal').addEventListener('click', function() {
-    document.getElementById('modalDetalhes').style.display = 'none';
-});
-
-</script>
-
+<script src="/js/lista.js"></script>
+<script src="button.js"></script>
 </body>
 </html>
